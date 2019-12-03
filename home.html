@@ -1,0 +1,144 @@
+<!doctype html>
+
+<script type="text/javascript" language="javascript" src="jquery.js"></script>
+<script type="text/javascript" language="javascript" src="script.js"></script>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+    <h1>Bem vindo</h1>
+    <div id="Form">
+    <p>Digite O numero de campos</p>
+    <form>
+            <div class="form-group">
+              
+              <input type="text" class="form-control" id="Campos">
+            </div>
+    </form>
+           
+
+    <button id='criarLinha'>Criar uma nova linha</button>
+    </div>
+ 
+    <div class="Linha" style="width:600px;">
+    <!-- RECEBE DIVS DINAMICAS -->
+    </div>
+   
+    <script>
+   /* $(document).ready(function(){
+        var divPai = $('.Linha');
+        var btnCriar = $('#criarLinha');
+        var error=[];
+         
+        btnCriar.click(function(){
+            var Qt_campos = parseInt(document.getElementById("Campos").value,10);
+            console.log(Qt_campos);
+            if(Number.isInteger(Qt_campos)){
+                console.log('teste');
+                for(i=0; i<Qt_campos; i++){
+                    divPai.append("<input type='text' class='form-control' id='teste'='Example input placeholder'>");
+                    document.getElementById('teste').setAttribute('id', i);       
+                }
+                divPai.append("<button id='soma'>soma</button>");
+              
+                var btnSoma = $('#soma');
+                btnSoma.click(function(){
+                    var error=[];
+                    let aux=0;
+                    var i;
+                    let valor_Campos = new Array();
+                    for(i=0; i<Qt_campos; i++){
+                        if(parseInt(document.getElementById(i).value,10)){
+                            valor_Campos.push(parseInt(document.getElementById(i).value,10));
+                        }else{
+                           
+                           error.push(i+1);
+                   
+                        }                 
+                    }
+                    if(error.length>0){
+                        var div = document.getElementById("textoModalErro");
+                        div.innerHTML  = "<p> Valores incorretos nos inputs: " + error.toString() +"</p>";
+                        $("#modalErro").modal() 
+                    }else{
+                        var soma=0;
+                        for(i=0;i<Qt_campos; i++){
+                            console.log(valor_Campos[i]);
+                            soma = soma + valor_Campos[i];
+
+                        }
+                        var div = document.getElementById("textoModalSoma");
+                        div.innerHTML  = "<p> Valor da soma: " + soma +"</p>";
+                        $("#modalSoma").modal() 
+
+                    }
+                    console.log(error.toString());
+                    console.log(valor_Campos.toString());
+                });
+            }else{
+                console.log("falso");
+            }
+           
+           /* divPai.append("<div class='form-group'><input type='text' class='form-control' id='formGroupExampleInput' placeholder='Example input placeholder'></div>");
+            divPai.append("<button id='criarLinha'>Criar uma nova linha</button>");
+            //divPai.append("<div class='mudarBox' style='display:table-cell;width:20px;vertical-align:middle;'>div mudar</div>");
+            //divPai.append("<div class='excluirBox' style='display:table-cell;width:20px;vertical-align:middle;'>div excluir</div>");
+        *//*
+        });
+         
+        });*/
+    </script>
+    <div class="modal" tabindex="-1" role="dialog" id="Modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" id="TituloModal">
+              
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="textoModal">
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- <div class="modal" tabindex="-1" role="dialog" id="modalSoma">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Inserção não valida</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="textoModalSoma">
+                 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+               
+                </div>
+              </div>
+            </div>
+          </div>-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
